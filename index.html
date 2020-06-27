@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>By's Portfolio</title>
-    <meta name="description" content="Portfolio for world's highest front-end developer By">
-    <meta name="author" content="By">
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <script 
-        src="https://kit.fontawesome.com/096073a2a8.js" 
-        crossorigin="anonymous">
-    </script>
-    <link 
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
-        rel="stylesheet"
+    <meta
+      name="description"
+      content="Portfolio for world's highest front-end developer By"
     />
-    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="By" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/096073a2a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <i class="fas fa-laptop-code"></i>
-            <a href="#">By</a>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item">Home</li>
-            <li class="navbar__menu__item">About</li>
-            <li class="navbar__menu__item">Skills</li>
-            <li class="navbar__menu__item">Work</li>
-            <li class="navbar__menu__item">Testimonials</li>
-            <li class="navbar__menu__item">Contact</li>
-        </ul>
-    <!-- Home -->
-    <section id="home">
-        <img 
-            src="imgs/profile.jpg" 
-            alt="By's profile photo"
-            class="home__avatar"
+      <div class="navbar__logo">
+        <i class="fas fa-laptop-code"></i>
+        <a href="#">By</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">Work</li>
+        <li class="navbar__menu__item">Testimonials</li>
+        <li class="navbar__menu__item">Contact</li>
+      </ul>
+      <!-- Home -->
+      <section id="home">
+        <img
+          src="imgs/profile.jpg"
+          alt="By's profile photo"
+          class="home__avatar"
         />
-        <h1 class="home__title">
-            안녕하세요, <br />저는 김병연입니다
-        </h1>
+        <h1 class="home__title">안녕하세요, <br />저는 김병연입니다</h1>
         <h2 class="home__description"></h2>
         <button class="home__contact">Contact Me</button>
-    </section>
+      </section>
     </nav>
     <!-- About -->
     <section id="about">
-
+      <h1>About me</h1>
+      <p>
+        작년부터 코딩에 관심을 갖게 되어 꾸준히 개발 중인 김병연입니다. 작성
+        중인 현재까지 종로 에이콘 아카데미에서 자바(JAVA)기반의 웹&앱
+        응용SW개발자 양성과정을 배우고 있습니다. 전반적인 과정은 백엔드이지만
+        프론트엔드에 더욱 관심을 갖게 되어 백엔드도 겸비한 프론트엔드 개발자를
+        꿈꾸고 있습니다! 미니 프로젝트부터 2차 프로젝트까지 3번의 아이디어를
+        제공하고 조장을 하면서 팀원들과의 소통을 중요시 했습니다. 도전의
+        연속이였지만 꾸준히 하니 실력도 늘고 재밌게 코딩을 할 수 있었습니다.
+        아직 부족한 것을 많이 느껴서 꾸준히 공부하고 제 가치를 늘리고 싶습니다.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">Front-end</div>
+          <div class="major__description">
+            HTML, CSS, Javascript, Vue.js, React, JQuery
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="major__title">Back-end</div>
+          <div class="major__description">
+            Java, JSP/Servlet, MySQL, Oracle, Spring, Mybatis, Tiles
+          </div>
+        </div>
+        <div class="about__academy">
+          <div class="academy">
+            <img
+              src="imgs/acornacademy.png"
+              alt="acorn"
+              class="academy__logo"
+            />
+            <p class="academy__name"></p>
+            <p class="academy__period"></p>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Skills -->
     <section id="skills"></section>
@@ -59,5 +101,5 @@
     <section id="testimonials"></section>
     <!-- Contact -->
     <section id="contact"></section>
-</body>
+  </body>
 </html>
