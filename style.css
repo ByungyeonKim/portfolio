@@ -430,3 +430,34 @@ p {
 .name a {
   color: var(--color-light-green);
 }
+
+/* Contact */
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact__title,
+.contact__email,
+.contact__link,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin-bottom: 32px;
+}
+
+.contact__email {
+  margin-bottom: 24px;
+}
+
+.contact__link i {
+  margin-bottom: 16px;
+  font-size: var(--font-medium);
+  transition: var(--animation-duration);
+}
+
+.contact__link i:hover {
+  transform: scale(1.2);
+  color: var(--color-light-green);
+}
