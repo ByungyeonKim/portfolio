@@ -120,8 +120,13 @@ p {
   transition: 0.5s;
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+.navbar__toggle-button {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: var(--font-medium);
+  color: var(--color-white);
+  display: none;
 }
 
 /* Home */
@@ -460,4 +465,20 @@ p {
 .contact__link i:hover {
   transform: scale(1.2);
   color: var(--color-light-green);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle-button{
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
 }
