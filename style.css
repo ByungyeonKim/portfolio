@@ -38,7 +38,7 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   cursor: default;
 }
 
@@ -97,7 +97,7 @@ p {
   color: var(--color-white);
   justify-content: space-between;
   align-items: center;
-  transition: 0.5s ease-in-out;
+  transition: var(--animation-duration) ease-in-out;
 }
 
 .navbar__logo {
@@ -121,7 +121,7 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-light-green);
-  transition: 0.5s;
+  transition: var(--animation-duration) ease-in-out;
 }
 
 .navbar__toggle-button {
@@ -135,7 +135,7 @@ p {
 
 #navbar.navbar--dark {
   background-color: var(--color-light-green);
-  transition: 0.5s ease-in-out;
+  transition: var(--animation-duration) ease-in-out;
   z-index: 99;
 }
 
@@ -180,7 +180,7 @@ p {
 }
 
 .home__contact::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -397,7 +397,7 @@ p {
 }
 
 .project__description h3::after {
-  content: "";
+  content: '';
   display: block; /*한 줄에 하나씩 들어가기 위해*/
   position: relative;
   width: 50px;
@@ -488,7 +488,7 @@ p {
 
 @media screen and (max-width: 768px) {
   /* Navbar */
-  .navbar__toggle-button{
+  .navbar__toggle-button {
     display: block;
   }
   #navbar {
