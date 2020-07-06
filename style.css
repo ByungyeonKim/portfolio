@@ -468,6 +468,7 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  /* Navbar */
   .navbar__toggle-button{
     display: block;
   }
@@ -480,5 +481,9 @@ p {
     width: 100%;
     text-align: center;
     display: none;
+  }
+  /* Skills */
+  .skillset {
+    flex-direction: column;
   }
 }
