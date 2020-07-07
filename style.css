@@ -486,6 +486,26 @@ p {
   color: var(--color-light-green);
 }
 
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: var(--font-medium);
+  background-color: var(--color-light-green);
+  border-radius: 50%;
+  color: var(--color-light-white);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 768px) {
   /* Navbar */
   .navbar__toggle-button {
