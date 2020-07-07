@@ -499,6 +499,7 @@ p {
   color: var(--color-light-white);
   opacity: 0;
   pointer-events: none;
+  transition: 0.5s;
 }
 
 .arrow-up.visible {
