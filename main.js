@@ -25,9 +25,15 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
 
+//모바일 화면 시 Toggle button 활성화
+const navbarToggleBtn = document.querySelector('.navbar__toggle-button');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
 //contact me 버튼 클릭 시 contact section 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {

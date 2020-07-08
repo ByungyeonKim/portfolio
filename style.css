@@ -405,7 +405,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-light-green);
   margin-bottom: 30px;
 }
 
@@ -417,7 +417,7 @@ p {
   height: 2px;
   left: 50%;
   top: 50%;
-  margin-left: -25px;
+  transform: translateX(-50%);
   background-color: var(--color-light-white);
 }
 
@@ -528,12 +528,27 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-light-green);
+    z-index: 99;
   }
+
+  .navbar__menu__item {
+    color: var(--color-light-white);
+  }
+
+  .navbar__menu__item:hover {
+    background-color: var(--color-teal);
+  }
+
   .navbar__menu {
     flex-direction: column;
     width: 100%;
     text-align: center;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
   /* Skills */
   .skillset {
