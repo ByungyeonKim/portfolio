@@ -65,6 +65,14 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
+  //categoryBtn 클릭 시 효과 구현
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  const target =
+    // ? = BUTTON이 맞으면 e.target을 실행하고 아니면(:) e.target.parentNode를 실행 해줘
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
