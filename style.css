@@ -12,6 +12,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
+  --color-dark-blue: #004a9f;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -425,6 +426,43 @@ p {
 .project__description:hover {
   opacity: 0.8;
   top: 0px;
+}
+
+/* Announcement */
+#announcement {
+  background-color: var(--color-blue);
+}
+
+.info {
+  color: var(--color-light-white);
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.info::before {
+  content: '4~5주간의 기초 자바수업을 마치고 일주일 동안 만든 미니프로젝트 결과물을 발표하는 영상입니다.';
+  position: absolute;
+  width: 225px;
+  height: 75px;
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-white);
+  font-size: var(--font-micro);
+  left: 13px;
+  top: -65px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: var(--animation-duration);
+  opacity: 0;
+  transform: skewX(-10deg);
+  pointer-events: none;
+}
+
+.info:hover::before {
+  left: 22px;
+  top: -70px;
+  opacity: 1;
 }
 
 /* Testimonials */
