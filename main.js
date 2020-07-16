@@ -32,7 +32,10 @@ navbarMenu.addEventListener('click', (event) => {
 const navbarToggleBtn = document.querySelector('.navbar__toggle-button');
 navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
+  navbarToggleBtn.classList.toggle('active');
+  navbarToggleBtn.classList.toggle('not-active');
 });
+
 //contact me 버튼 클릭 시 contact section 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
