@@ -28,6 +28,9 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
+//History 섹션일때 down 효과 구현
+const history = document.querySelector('#history');
+
 //모바일 화면 시 Toggle button 활성화
 const navbarToggleBtn = document.querySelector('.navbar__toggle-button');
 navbarToggleBtn.addEventListener('click', () => {

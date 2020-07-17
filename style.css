@@ -591,8 +591,76 @@ p {
   opacity: 1;
 }
 
+/* History */
+#history {
+  background-color: var(--color-light-white);
+}
+
+.history__container {
+  max-width: 790px;
+  margin: auto;
+}
+
+.history__list {
+  text-align: left;
+  margin-top: 50px;
+  position: relative;
+}
+
+.history__list::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-teal);
+  width: 5px;
+  height: 0%;
+  left: -1px;
+  top: 0%;
+}
+
+.history__list::before.down {
+  height: 100%;
+  transition: all 5s ease-in-out;
+}
+
+.history__list::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-teal);
+  width: 0px;
+  height: 0px;
+  border-top: 10px solid var(--color-teal);
+  border-left: 10px solid var(--color-light-white);
+  border-right: 10px solid var(--color-light-white);
+  border-bottom: 10px solid var(--color-light-white);
+  left: -8px;
+  top: 0%;
+}
+
+.history__list::after.down {
+  top: 100%;
+  transition: all 5s ease-in-out;
+}
+
+.history__list li {
+  padding: 5px;
+  margin: 0px 0px 50px 30px;
+  position: relative;
+  color: var(--color-grey);
+}
+
+.history__list li::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-green);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  top: 40%;
+  left: -16px;
+}
+
 /* Testimonials */
-#testimonials {
+/* #testimonials {
   background-color: var(--color-light-white);
 }
 
@@ -631,7 +699,7 @@ p {
 
 .name a {
   color: var(--color-light-green);
-}
+} */
 
 /* Contact */
 #contact {
