@@ -53,6 +53,7 @@ document.addEventListener('scroll', () => {
   if (scrollY > 2700 && scrollY < 3200) {
     historyList.classList.add('down');
   }
+  console.log(scrollY);
 });
 
 //스크롤 다운 시 arrow-up 투명도 조절

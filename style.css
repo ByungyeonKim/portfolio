@@ -559,6 +559,12 @@ p {
   background-color: var(--color-blue);
 }
 
+.announcement__video {
+  width: 560px;
+  height: 350px;
+  margin: auto;
+}
+
 .info {
   color: var(--color-light-white);
   margin-left: 10px;
@@ -567,9 +573,9 @@ p {
 }
 
 .info::before {
-  content: '4~5주간의 기초 자바수업을 마치고 일주일 동안 만든 미니프로젝트 결과물을 발표하는 영상입니다.';
+  content: '4~5주간의 기초 자바수업을 마치고 일주일 동안 만든 미니프로젝트 결과물을 발표하는 첫 영상입니다.';
   position: absolute;
-  width: 225px;
+  width: 100px;
   height: 75px;
   background-color: var(--color-dark-blue);
   color: var(--color-light-white);
@@ -645,7 +651,15 @@ p {
   padding: 5px;
   margin: 0px 0px 50px 30px;
   position: relative;
-  color: var(--color-grey);
+  color: var(--color-light-grey);
+  transition: all 0.5s;
+  cursor: pointer;
+  font-weight: var(--weight-semi-bold);
+  display: inline-block;
+}
+
+.history__list li:hover {
+  transform: translateX(50px) scale(1.1);
 }
 
 .history__list li::before {
@@ -818,6 +832,17 @@ p {
   /* My work */
   .category__btn {
     width: 100%;
+  }
+
+  /* Announcement */
+  .announcement__video {
+    width: 280px;
+    height: 200px;
+  }
+
+  /* History */
+  .history__list li:hover {
+    transform: translateX(20px);
   }
 
   /* Testimonials */
