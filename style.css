@@ -617,7 +617,7 @@ p {
   top: 0%;
 }
 
-.history__list::before.down {
+.history__list.down::before {
   height: 100%;
   transition: all 5s ease-in-out;
 }
@@ -636,7 +636,7 @@ p {
   top: 0%;
 }
 
-.history__list::after.down {
+.history__list.down::after {
   top: 100%;
   transition: all 5s ease-in-out;
 }

@@ -28,9 +28,6 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
-//History 섹션일때 down 효과 구현
-const history = document.querySelector('#history');
-
 //모바일 화면 시 Toggle button 활성화
 const navbarToggleBtn = document.querySelector('.navbar__toggle-button');
 navbarToggleBtn.addEventListener('click', () => {
@@ -45,11 +42,17 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
+//History 섹션일때 down 효과 구현
+const history = document.querySelector('#history');
+const historyList = history.querySelector('.history__list');
 //스크롤 다운 시 home contents 투명도 조절
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+  if (scrollY > 2700 && scrollY < 3200) {
+    historyList.classList.add('down');
+  }
 });
 
 //스크롤 다운 시 arrow-up 투명도 조절
