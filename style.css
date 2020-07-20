@@ -603,7 +603,7 @@ p {
 }
 
 .history__container {
-  max-width: 790px;
+  max-width: 760px;
   margin: auto;
 }
 
@@ -654,8 +654,9 @@ p {
   color: var(--color-light-grey);
   transition: all 0.5s;
   cursor: pointer;
-  font-weight: var(--weight-semi-bold);
   display: inline-block;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
 }
 
 .history__list li:hover {
