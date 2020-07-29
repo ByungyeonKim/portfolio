@@ -741,7 +741,7 @@ p {
 
 .contact__link i {
   margin-bottom: 16px;
-  font-size: var(--font-medium);
+  font-size: var(--font-large);
   transition: var(--animation-duration);
 }
 
