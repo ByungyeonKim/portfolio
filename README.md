@@ -1,6 +1,6 @@
 # Portfolio Site
 
-####저를 소개하는 웹사이트를 만들어 보았습니다 😁
+#### 저를 소개하는 웹사이트를 만들어 보았습니다 😁
 
 <img width="1536" alt="portfolio" src="https://user-images.githubusercontent.com/66554164/88765631-b982e000-d1b1-11ea-88bb-aa51d0b8c867.png">
 
