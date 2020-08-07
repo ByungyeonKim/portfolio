@@ -611,6 +611,8 @@ p {
   text-align: left;
   margin-top: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .history__list::before {
