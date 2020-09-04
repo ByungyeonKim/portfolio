@@ -12,6 +12,14 @@
 
 - VScode
 
+#### 활용 사이트
+
+- TinyPNG(이미지 용량 축소 사이트) : https://tinypng.com/
+- ColorTool(색상 조합, 선택 사이트) : https://material.io/resources/color/#!/?view.left=0&view.right=0
+- FontAwesome(아이콘) : https://fontawesome.com/
+- Unsplash(이미지) : https://unsplash.com/
+- Canva(파비콘 제작) : https://www.canva.com/ko_kr/
+
 ---
 
 ### 프로젝트
