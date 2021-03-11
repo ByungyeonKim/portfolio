@@ -99,3 +99,32 @@ workBtnContainer.addEventListener('click', (e) => {
     projectContainer.classList.remove('anim-out');
   }, 300);
 });
+
+const sectionIds = [
+  '#home', 
+  '#about', 
+  '#skills', 
+  '#work', 
+  '#announcement',
+  '#history', 
+  '#testimonials', 
+  '#contact'
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    console.log(entry.target);
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
