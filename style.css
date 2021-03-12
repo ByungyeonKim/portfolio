@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Global */
 :root {
   /* Color */
@@ -279,23 +281,27 @@ p {
 
 /* Home */
 #home {
-  background: url(imgs/homebackground.png) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(imgs/homebackground.jpg) center/cover no-repeat;
   width: 100%;
-  height: 620px;
+  height: 100vh;
   text-align: center;
   padding: 35px;
   padding-top: 100px;
 }
 
-.home__avatar {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  border: 3px solid var(--color-light-white);
+.home__container {
+  max-width: 500px;
 }
 
 .home__title {
   color: var(--color-light-white);
+}
+
+.home__intro {
+  color: var(--color-yellow);
 }
 
 .home__contact {
@@ -342,66 +348,6 @@ p {
   margin: auto;
 }
 
-/* About */
-.about__majors {
-  display: flex;
-  justify-content: space-around;
-  margin: 70px 0px;
-}
-
-.major__icon {
-  border: 1px solid var(--color-teal);
-  border-radius: 50%;
-  width: 170px;
-  height: 170px;
-  margin: auto;
-  font-size: 85px;
-  line-height: 170px;
-  margin-bottom: 20px;
-  color: var(--color-light-green);
-}
-
-.major__icon i {
-  transition: var(--animation-duration);
-}
-
-.major__icon:hover i {
-  color: var(--color-green);
-  transform: rotate(-30deg) scale(1.1);
-}
-
-.major__title,
-.major__description {
-  color: var(--color-dark-grey);
-}
-
-.major__description {
-  font-size: var(--font-small);
-}
-
-.academy {
-  display: flex;
-  align-items: center;
-}
-
-.academy__description {
-  margin: 0px 16px;
-  text-align: left;
-}
-
-.academy__name,
-.academy__period {
-  color: var(--color-light-grey);
-}
-
-.academy__name {
-  font-size: var(--font-small);
-}
-
-.academy__period {
-  font-size: var(--font-micro);
-}
-
 /* Skills */
 
 #skills {
@@ -412,7 +358,7 @@ p {
   color: var(--color-white);
 }
 
-.skill__description {
+/* .skill__description {
   display: flex;
   justify-content: space-between;
 }
@@ -457,7 +403,7 @@ p {
 .etc {
   padding: 20px;
   height: 50%;
-}
+} */
 
 /* Work */
 .category__btn {

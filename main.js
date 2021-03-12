@@ -36,23 +36,16 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
-//History 섹션일때 down 효과 구현
-const history = document.querySelector('#history');
-const historyList = history.querySelector('.history__list');
 //스크롤 다운 시 home contents 투명도 조절
 const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-  if (scrollY > 2700 && scrollY < 3200) {
-    historyList.classList.add('down');
-  }
+  home.style.opacity = 1 - window.scrollY / 500;
 });
 
 //스크롤 다운 시 arrow-up 투명도 조절
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 3) {
+  if (window.scrollY > 300) {
     arrowUp.classList.add('visible');
   } else {
     arrowUp.classList.remove('visible');
@@ -97,7 +90,6 @@ workBtnContainer.addEventListener('click', (e) => {
 // IntersectionObserver API
 const sectionIds = [
   '#home', 
-  '#about', 
   '#skills', 
   '#work', 
   '#announcement',
