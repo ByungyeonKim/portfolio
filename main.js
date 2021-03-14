@@ -58,34 +58,48 @@ arrowUp.addEventListener('click', () => {
 });
 
 //Projects
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-  if (filter == null) {
-    return;
-  }
-  //categoryBtn 클릭 시 효과 구현
-  const active = document.querySelector('.category__btn.selected');
-  active.classList.remove('selected');
-  const target =
-    // ? = BUTTON이 맞으면 e.target을 실행하고 아니면(:) e.target.parentNode를 실행 해줘
-    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-  target.classList.add('selected');
+const prevBtn = document.querySelector('.slide__prev');
+const nextBtn = document.querySelector('.slide__next');
+const slides = document.querySelectorAll('.slide__item');
+const numberOfslide = slides.length;
 
-  projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
+prevBtn.addEventListener('click', () => {
+  console.log(slides);
+  console.log(numberOfslide);
 });
+
+nextBtn.addEventListener('click', () => {
+  console.log('Clicked');
+});
+
+// const workBtnContainer = document.querySelector('.work__categories');
+// const projectContainer = document.querySelector('.work__projects');
+// const projects = document.querySelectorAll('.project');
+// workBtnContainer.addEventListener('click', (e) => {
+//   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+//   if (filter == null) {
+//     return;
+//   }
+//   //categoryBtn 클릭 시 효과 구현
+//   const active = document.querySelector('.category__btn.selected');
+//   active.classList.remove('selected');
+//   const target =
+//     // ? = BUTTON이 맞으면 e.target을 실행하고 아니면(:) e.target.parentNode를 실행 해줘
+//     e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+//   target.classList.add('selected');
+
+//   projectContainer.classList.add('anim-out');
+//   setTimeout(() => {
+//     projects.forEach((project) => {
+//       if (filter === '*' || filter === project.dataset.type) {
+//         project.classList.remove('invisible');
+//       } else {
+//         project.classList.add('invisible');
+//       }
+//     });
+//     projectContainer.classList.remove('anim-out');
+//   }, 300);
+// });
 
 // IntersectionObserver API
 const sectionIds = [

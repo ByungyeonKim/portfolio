@@ -54,6 +54,11 @@ a {
 ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: top;
 }
 
 table {
@@ -398,7 +403,7 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 48px;
-  margin: 80px 0;
+  margin-top: 32px;
 }
 
 .language__item {
@@ -419,7 +424,35 @@ p {
 }
 
 /* Work */
-.category__btn {
+.slide__container{
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.slide__prev,
+.slide__next {
+  font-size: var(--font-medium);
+  margin: 0 24px;
+}
+
+.slide__list {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide__list,
+.slide__item,
+.slide__item img {
+  max-width: 1080px;
+}
+
+.slide__item {
+  transition: 1s;
+}
+
+/* .category__btn {
   border: 1px solid var(--color-light-grey);
   margin: 3px 0px;
   padding: 8px 48px;
@@ -501,7 +534,7 @@ p {
 
 .project__description h3::after {
   content: '';
-  display: block; /*한 줄에 하나씩 들어가기 위해*/
+  display: block;
   position: relative;
   width: 50px;
   height: 2px;
@@ -514,7 +547,7 @@ p {
 .project__description:hover {
   opacity: 0.8;
   top: 0px;
-}
+} */
 
 /* Announcement */
 #announcement {
@@ -801,9 +834,7 @@ p {
   }
 
   /* My work */
-  .category__btn {
-    width: 100%;
-  }
+ 
 
   /* Announcement */
   .announcement__video {
