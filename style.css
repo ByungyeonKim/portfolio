@@ -424,11 +424,15 @@ p {
 }
 
 /* Work */
-.slide__container{
+.slide__wrap {
   display: flex;
+  justify-content: center;
   align-items: center;
-  max-width: 1080px;
   margin: auto;
+}
+
+.slide__container {
+  overflow: hidden;
 }
 
 .slide__prev,
@@ -439,115 +443,24 @@ p {
 
 .slide__list {
   display: flex;
-  overflow: hidden;
+  transition: 1s;
 }
 
 .slide__list,
 .slide__item,
 .slide__item img {
-  max-width: 1080px;
+  width: 980px;
 }
 
 .slide__item {
   transition: 1s;
 }
 
-/* .category__btn {
-  border: 1px solid var(--color-light-grey);
-  margin: 3px 0px;
-  padding: 8px 48px;
-  text-transform: uppercase;
-}
-
-.category__btn.selected {
-  background-color: var(--color-light-green);
-}
-
-.category__btn.selected .category__count {
-  opacity: 1;
-  top: 0px;
-}
-
-.category__count {
-  background-color: var(--color-teal);
-  border-radius: 50%;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  position: relative;
-  top: -20px;
-  left: 5px;
-  transition: var(--animation-duration) ease;
-  opacity: 0;
-  color: var(--color-light-white);
-}
-
-.work__projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  opacity: 1;
-  transition: all var(--animation-duration) ease-out;
-}
-
-.work__projects.anim-out {
-  opacity: 0;
-  transform: scale(0.95) translateY(40px);
-}
-
-.project {
-  position: relative;
-  width: 300px;
-  height: 200px;
-  margin: 5px;
-  overflow: hidden;
-}
-
-.project.invisible {
-  display: none;
-}
-
-.project__img {
-  width: 100%;
-  height: 100%;
-}
-
-.project__description {
-  position: absolute;
-  top: 20px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--color-black);
+.slide__side {
+  opacity: 0.2;
+  pointer-events: none;
   transition: var(--animation-duration);
 }
-
-.project__description h3 {
-  color: var(--color-light-green);
-  margin-bottom: 30px;
-}
-
-.project__description h3::after {
-  content: '';
-  display: block;
-  position: relative;
-  width: 50px;
-  height: 2px;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%);
-  background-color: var(--color-light-white);
-}
-
-.project__description:hover {
-  opacity: 0.8;
-  top: 0px;
-} */
 
 /* Announcement */
 #announcement {

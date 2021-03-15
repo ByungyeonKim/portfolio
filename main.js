@@ -60,17 +60,38 @@ arrowUp.addEventListener('click', () => {
 //Projects
 const prevBtn = document.querySelector('.slide__prev');
 const nextBtn = document.querySelector('.slide__next');
+const slideList = document.querySelector('.slide__list');
 const slides = document.querySelectorAll('.slide__item');
-const numberOfslide = slides.length;
+let index = 0;
+moveSlide();
+
+function moveSlide() {
+  if(index === 0) {
+    prevBtn.classList.add('slide__side');
+  } else {
+    prevBtn.classList.remove('slide__side');
+  };
+
+  if (index === -(slides.length -1)) {
+    nextBtn.classList.add('slide__side');
+  } else {
+    nextBtn.classList.remove('slide__side');
+  };
+
+  slideList.style.transform = `translateX(${index * 100}%)`;
+}
 
 prevBtn.addEventListener('click', () => {
-  console.log(slides);
-  console.log(numberOfslide);
+  ++index;
+  moveSlide();
 });
 
 nextBtn.addEventListener('click', () => {
-  console.log('Clicked');
+  --index;
+  moveSlide();
 });
+
+
 
 // const workBtnContainer = document.querySelector('.work__categories');
 // const projectContainer = document.querySelector('.work__projects');
