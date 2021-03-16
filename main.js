@@ -22,14 +22,6 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 });
 
-//모바일 화면 시 Toggle button 활성화
-const navbarToggleBtn = document.querySelector('.navbar__toggle-button');
-navbarToggleBtn.addEventListener('click', () => {
-  navbarMenu.classList.toggle('open');
-  navbarToggleBtn.classList.toggle('active');
-  navbarToggleBtn.classList.toggle('not-active');
-});
-
 //contact me 버튼 클릭 시 contact section 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
@@ -123,7 +115,7 @@ function scrollIntoView(selector) {
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.5
+  threshold: 0.3
 };
 
 const observerCallback = (entries, observer) => {
@@ -146,10 +138,20 @@ window.addEventListener('wheel', () => {
   if(window.scrollY === 0) {
     selectedNavIndex = 0;
   } else if (
-      Math.round(window.scrollY + window.innerHeight) >= 
-      document.body.clientHeight
-    ) {
-      selectedNavIndex = navItems.length - 1;
-    }
-    selectNavItem(navItems[selectedNavIndex]);
+    Math.round(window.scrollY + window.innerHeight) >= 
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
+
+// History down
+const historyList = document.querySelector('.history__list');
+window.addEventListener('scroll', () => {
+  if(window.scrollY >= sections[4].offsetTop) {
+    historyList.classList.add('down');
+  } else {
+    historyList.classList.remove('down');
+  }
 });
