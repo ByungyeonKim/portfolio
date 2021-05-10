@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>By's Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio for world's highest front-end developer By"
-    />
+    <meta name="description" content="Portfolio for world's highest front-end developer By" />
     <meta name="author" content="By" />
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/096073a2a8.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="icon" type="image/ico" href="images/favicon.ico" />
+    <script src="https://kit.fontawesome.com/096073a2a8.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -23,245 +17,72 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <a href="#"><i class="fas fa-laptop-code"></i> By</a>
-      </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#skills">Skills</li>
-        <li class="navbar__menu__item" data-link="#work">Work</li>
-        <li class="navbar__menu__item" data-link="#announcement">
-          Announcement
-        </li>
-        <li class="navbar__menu__item" data-link="#history">History</li>
-        <li class="navbar__menu__item" data-link="#testimonials">
-          Testimonials
-        </li>
-        <li class="navbar__menu__item" data-link="#contact">Contact</li>
-      </ul>
-    </nav>
-
+    <header>
+      <a href="#" class="logo">kby</a>
+      <nav id="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item active" data-link="#home">Home</li>
+          <li class="navbar-item" data-link="#intro">Intro</li>
+          <li class="navbar-item" data-link="#work">Work</li>
+          <li class="navbar-item" data-link="#history">History</li>
+          <li class="navbar-item" data-link="#testimonials">Testimonials</li>
+          <li class="navbar-item" data-link="#contact">Contact</li>
+        </ul>
+      </nav>
+    </header>
     <!-- Home -->
-    <section id="home">
-      <div class="home__container">
-        <h1 class="home__title">안녕하세요! <br />김병연입니다.</h1>
-        <p class="home__intro">
-          커피를 좋아하고 운동이 취미입니다. 활동적인 것도 좋아하지만 한 번 집중을 하면 그 자리에서 잘 일어나지 않습니다.
-          프론트엔드 개발자로서 부족함을 느껴 최근 CS50과 웹 UI 개발 코스를 수료하여 컴퓨터과학 기초와 필수적인 HTML, CSS의 수준을
-          끌어올렸습니다. 현재는 JavaScript와 TypeScript를 병행하여 공부하고 있습니다.
-        </p>
-        <button class="home__contact"><span>Contact Me</span></button>
-      </div>
+    <section id="home" class="home-container">
+      <img class="stars" src="./images/backgrounds/stars.png" alt="밤하늘의 별" />
+      <img class="moon" src="./images/backgrounds/moon.png" alt="달" />
+      <img class="mountainsBehind" src="./images/backgrounds/mountains_behind.png" alt="뒷 산" />
+      <p class="greet">안녕하세요, 김병연입니다 ✨</p>
+      <button class="intro-btn">소개글 보기</button>
+      <img class="mountainsFront" src="./images/backgrounds/mountains_front.png" alt="산" />
     </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1>Skills</h1>
-        <table>
-          <caption>Technologies Level</caption>
-          <thead>
-            <tr>
-              <th scope="col">Lv4. Master</th>
-              <th scope="col">Lv3. Advanced</th>
-              <th scope="col">Lv2. Intermediate</th>
-              <th scope="col">Lv1. Basic</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>해당 언어에 대해 자신이 있습니다. 가장 잘하고 해당 언어로 프로젝트를 많이 했습니다.</td>
-              <td>언어의 컨셉을 알고 어떻게 동작하는지 알고 있습니다. 프로젝트를 다양하게 해보았고 코드를 읽을 수 있습니다.</td>
-              <td>간단한 프로젝트를 만들어보고 문서를 보고 기초개념을 알 정도입니다. 동료에게 설명할 수 있습니다.</td>
-              <td>언어를 사용해봤고 가지고 놀아본 정도입니다. 동료에게 설명하거나 가르칠 실력은 되지 않습니다.</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul class="language__list">
-          <li class="language__item">
-            <img src="./imgs/logo/html5.png" alt="HTML5 로고">
-            <h2 class="language">HTML5</h2>
-            <div class="language__level">Lv4. Master</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/css3.png" alt="CSS3 로고">
-            <h2 class="language">CSS3</h2>
-            <div class="language__level">Lv4. Master</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/js.png" alt="javascript 로고">
-            <h2 class="language">JavaScript</h2>
-            <div class="language__level">Lv3. Advanced</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/react.png" alt="react 로고">
-            <h2 class="language">React.js</h2>
-            <div class="language__level">Lv2. Intermediate</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/java.png" alt="java 로고">
-            <h2 class="language">Java</h2>
-            <div class="language__level">Lv2. Intermediate</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/c.png" alt="c 로고">
-            <h2 class="language">C</h2>
-            <div class="language__level">Lv2. Intermediate</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/ts.png" alt="typescript 로고">
-            <h2 class="language">TypeScript</h2>
-            <div class="language__level">Lv1. Basic</div>
-          </li>
-          <li class="language__item">
-            <img src="./imgs/logo/swift.png" alt="swift 로고">
-            <h2 class="language">Swift</h2>
-            <div class="language__level">Lv1. Basic</div>
-          </li>
-        </ul>
-      </div>
+    <!-- Intro -->
+    <section id="intro" class="intro-container">
+      <h2>Parallax</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat cumque repudiandae sint,
+        quis quos suscipit omnis incidunt tempora voluptate voluptates ex reprehenderit accusantium
+        quo iusto cum laudantium mollitia unde itaque. Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Ab, voluptates corrupti laudantium qui deleniti quas necessitatibus
+        voluptatum, vel dolor accusamus obcaecati impedit dolore natus error nam omnis molestiae
+        saepe quia! <br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsam ad ducimus, iusto
+        maiores nulla, ea soluta laborum quo unde, in quis incidunt doloremque deserunt at aperiam
+        blanditiis laudantium aspernatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Soluta cum dolorem commodi deleniti quo labore, odio rerum voluptatum veniam fuga, molestiae
+        animi nihil necessitatibus distinctio illum incidunt velit modi? Officiis? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Dicta voluptatem consequatur, nostrum incidunt culpa
+        iure ab dolorum maxime voluptas cum? Iusto laboriosam ratione repudiandae id dolore est
+        asperiores nemo quae.<br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsam ad ducimus, iusto
+        maiores nulla, ea soluta laborum quo unde, in quis incidunt doloremque deserunt at aperiam
+        blanditiis laudantium aspernatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Soluta cum dolorem commodi deleniti quo labore, odio rerum voluptatum veniam fuga, molestiae
+        animi nihil necessitatibus distinctio illum incidunt velit modi? Officiis? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Dicta voluptatem consequatur, nostrum incidunt culpa
+        iure ab dolorum maxime voluptas cum? Iusto laboriosam ratione repudiandae id dolore est
+        asperiores nemo quae.<br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsam ad ducimus, iusto
+        maiores nulla, ea soluta laborum quo unde, in quis incidunt doloremque deserunt at aperiam
+        blanditiis laudantium aspernatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Soluta cum dolorem commodi deleniti quo labore, odio rerum voluptatum veniam fuga, molestiae
+        animi nihil necessitatibus distinctio illum incidunt velit modi? Officiis? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Dicta voluptatem consequatur, nostrum incidunt culpa
+        iure ab dolorum maxime voluptas cum? Iusto laboriosam ratione repudiandae id dolore est
+        asperiores nemo quae.<br /><br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsam ad ducimus, iusto
+        maiores nulla, ea soluta laborum quo unde, in quis incidunt doloremque deserunt at aperiam
+        blanditiis laudantium aspernatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Soluta cum dolorem commodi deleniti quo labore, odio rerum voluptatum veniam fuga, molestiae
+        animi nihil necessitatibus distinctio illum incidunt velit modi? Officiis? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Dicta voluptatem consequatur, nostrum incidunt culpa
+        iure ab dolorum maxime voluptas cum? Iusto laboriosam ratione repudiandae id dolore est
+        asperiores nemo quae.
+      </p>
     </section>
-
-    <!-- Work -->
-    <section id="work" class="section">
-      <h1>My work</h1>
-      <h2>Projects</h2>
-      <div class="slide__wrap">
-        <button class="slide__prev"><i class="fas fa-chevron-circle-left"></i></button>
-        <div class="slide__container">
-          <ul class="slide__list">
-            <li class="slide__item"><img src="./imgs/projects/shopping-list.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/uiproject.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/weather.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/carrot-picking.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/minishopping-game.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/reactapp.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/project-007.png" alt=""></li>
-            <li class="slide__item"><img src="./imgs/projects/project-rabbit.png" alt=""></li>
-          </ul>
-        </div>
-        <button class="slide__next"><i class="fas fa-chevron-circle-right"></i></button>
-      </div>
-      <h2>Certificates</h2>
-      <ul class="certificate__list">
-        <li class="certificate__item"><img src="./imgs/onlinecertificates/webui.jpg" alt=""></li>
-        <li class="certificate__item"><img src="./imgs/onlinecertificates/javascript.jpg" alt=""></li>
-        <li class="certificate__item"><img src="./imgs/onlinecertificates/cs50.jpg" alt=""></li>
-        <li class="certificate__item"><img src="./imgs/onlinecertificates/cs50study.jpg" alt=""></li>
-      </ul>
-    </section>
-
-    <!-- Announcement  -->
-    <section id="announcement" class="section">
-      <h1>Announcement</h1>
-      <h2>Video</h2>
-      <h3>
-        Mini Project
-        <span class="info"><i class="fas fa-info-circle"></i></span>
-      </h3>
-      <div class="announcement__video">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube-nocookie.com/embed/fGTwjGuV4Is?start=337"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </section>
-
-    <!-- History -->
-    <section id="history" class="section">
-      <h1>History</h1>
-      <div class="history__container">
-        <ul class="history__list">
-          <li>첫 Eclipse 사용, Java awt를 이용한 미니게임 프로젝트 제작 - 국비지원 IT학원 1개월차</li>
-          <li>JSP, MySQL 첫 사용, HTML, CSS, JS를 이용한 라면모아 사이트 제작 - 국비지원 IT학원 2~3개월차</li>
-          <li>Spring 첫 사용, HTML, CSS, JS를 이용한 패션커뮤니티 사이트 제작 - 국비지원 IT학원 4~5개월차</li>
-          <li>Java, HTML, CSS, JavaScript, Spring, MySQL 학습 - 국비지원 IT학원 5.5개월</li>
-          <li>라이브러리 없이 포트폴리오 사이트 제작 - 드림코딩 온라인 아카데미</li>
-          <li>Web API, JavaScript를 이용한 당근뽑기 게임, 쇼핑리스트 프로젝트 제작 - 드림코딩 온라인 아카데미</li>
-          <li>React.js 첫 사용, 간단한 사용자 상호작용 사이트 제작 - 생활코딩 유튜버</li>
-          <li>Xcode 첫 사용, Swift 사용법 학습 및 토이 코딩 - 유튜브 및 Playgrounds</li>
-          <li>HTML, CSS 기본기 심화학습 및 Web UI 프로젝트 제작 - 네이버재단 부스트코스 웹 UI개발 심화과정 수료</li>
-          <li>C 첫 사용, 컴퓨터과학 기초 및 C를 이용한 팀 미션 프로젝트 수행 - 네이버재단 부스트코스 CS50 코칭스터디 수료</li>
-          <li>TypeScript 학습 및 프로젝트 제작 중(현재) - 드림코딩 온라인 아카데미</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="section">
-      <h1>Testimonials</h1>
-      <h3>See what they say about me</h3>
-      <div class="testimonials section__container">
-        <div class="testimonial">
-          <img
-            src="imgs/testimonial/testimonialnewlec.png"
-            alt="reference"
-            class="testimonial__reference"
-          />
-          <div class="testimonial__speech-bubble">
-            <p>
-              저는 개인적으로 회사에 도움이 되는 사람의 특징을 꼽으라면 주저없이
-              다음과 같은 요소를 말합니다. 어린아이의 눈을 가진 사람(매사에
-              호기심이 많은 사람), 시간을 느낄 수 있는 사람(발전하는 것이 보이는
-              사람), 사람을 좋아하는 사람(일은 혼자 하는 것이 아님을 아는 사람),
-              사람을 이해하는 사람(사람들이 꿈꾸는 세상을 아는 사람) 이 모든
-              범주에 들어가는 사람이라면 그 사람은 현재 실력이 없더라도 분명히
-              좋은 실력을 가질 것이며 세상에 도움이 되는 서비스를 만드는
-              아이디어를 가지게 될 것이라 생각합니다. 김병연군은 제가 생각하는
-              모든 것을 갖춘 사람이라고 생각되며 귀사에서 분명히 빛을 밝히는
-              사람이 될 것이라고 생각합니다.
-            </p>
-            <p class="name">
-              <a href="https://www.youtube.com/user/newlec1" target="_blank"
-                >박용우</a
-              >/에이콘아카데미 강사님
-            </p>
-          </div>
-        </div>
-        <div class="testimonial">
-          <div class="testimonial__speech-bubble">
-            <p>
-              진득한 사람이라는 글자 그대로 표현할수 있는 사람입니다. 마찬가지로
-              어느 기업이든 자신있게 이 사람을 데려가라고 말할 수 있습니다.
-              학원에 입과 후, 담당하는 반 학생으로 처음 만났을때 모든부분에서
-              새롭다보니 걱정을 많이했지만 우직하게 본인만의 길을 가는걸 보면서
-              참 진득한 학생이구나 라는 생각을 하게되었습니다. 특히 프로젝트를
-              진행하는 모습을 보면서 여유를 잃지 않고 주도적인 모습으로
-              프로젝트를 이끌어가는 능력이 탁월하고, 열정도 대단하다고
-              생각했습니다. 이렇듯 묵묵하되, 열정이 많고 주도적인 사람은 드물기
-              때문에 놓치기 아쉬운 인재입니다.
-            </p>
-            <p class="name">
-              <a href="http://www.hbiedu.com/" target="_blank">최민희</a
-              >/에이콘아카데미 매니저님
-            </p>
-          </div>
-          <img
-            src="imgs/testimonial/testimonialacorn.png"
-            alt="reference"
-            class="testimonial__reference"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">viva_kby@naver.com</h2>
-      <div class="contact__link">
-        <a href="https://github.com/ByungyeonKim" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <p class="contact__rights">2020 김병연 - All rights reserved</p>
-    </section>
-
     <!-- Arrow up -->
     <button class="arrow-up">
       <i class="fas fa-arrow-up"></i>
