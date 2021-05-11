@@ -30,21 +30,13 @@ navbarMenu.addEventListener('click', (event) => {
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: 'smooth' });
-  // selectNavItem(navItems[sectionIds.indexOf(selector)]);
 }
-
-//contact me 버튼 클릭 시 contact section 이동
-// const homeContactBtn = document.querySelector('.home__contact');
-// homeContactBtn.addEventListener('click', () => {
-//   scrollIntoView('#contact');
-// });
 
 //스크롤 다운 시 home contents 투명도 조절
 const greet = document.querySelector('.greet');
 const introBtn = document.querySelector('.intro-btn');
 
 document.addEventListener('scroll', () => {
-  moon.style.opacity = 1 - window.scrollY / 500;
   greet.style.opacity = 1 - window.scrollY / 800;
   introBtn.style.opacity = 1 - window.scrollY / 1300;
 });
@@ -59,9 +51,14 @@ document.addEventListener('scroll', () => {
   }
 });
 
-//arrow-up button 클릭 시 home section 이동
+// arrow-up button 클릭 시 home section 이동
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
+});
+
+// intro-btn button 클릭 시 intro section 이동
+introBtn.addEventListener('click', () => {
+  scrollIntoView('#intro');
 });
 
 // //Projects
