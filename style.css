@@ -80,7 +80,6 @@ header {
   border-radius: 20px;
 }
 
-.navbar-item.active, /* */
 .navbar-item:hover {
   background-color: #fff;
   color: #7579de;
