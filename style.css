@@ -20,7 +20,6 @@ body {
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
   line-height: 1;
   background: linear-gradient(#000000, #0b0c2b);
-  min-height: 100vh;
 }
 
 a {
@@ -46,16 +45,6 @@ header {
 
 .header-dark {
   transform: translateY(-100px);
-}
-
-.home-container::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, #1c0522, transparent);
-  z-index: 99;
 }
 
 .logo {
@@ -96,7 +85,7 @@ header {
   overflow-y: hidden;
 }
 
-.home-container::after {
+.home-container::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -106,13 +95,14 @@ header {
   z-index: 99;
 }
 
-.home-container::before {
+.home-container::after {
   content: 'Vector created by upklyak';
   text-align: right;
   position: absolute;
-  bottom: -40px;
+  bottom: 5px;
   right: 10px;
-  color: ghostwhite;
+  color: rgb(248, 248, 255, 0.5);
+  z-index: 99;
 }
 
 .home-container img {
