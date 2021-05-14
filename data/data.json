@@ -1,0 +1,36 @@
+{
+  "cards": [
+    {
+      "src": "./images/projects/bytube-card.png",
+      "alt": "유튜브 클론",
+      "title": "BYTube",
+      "description": "리액트로 유튜브를 최대한 비슷하게 만들어본 프로젝트입니다. 여러 시행착오를 겪고, 시간 투자도 많이한 프로젝트라서 배운 것도 많은 프로젝트입니다.",
+      "url": "https://bytube.netlify.app/",
+      "detail": "GitHub로 보기"
+    },
+    {
+      "src": "./images/projects/habit-card.png",
+      "alt": "습관 만들기",
+      "title": "습관 만들기",
+      "description": "리액트로 만들어본 습관 만들기 프로그램입니다. 클래스형 컴포넌트 및 기초개념과 친해지기 위해 만들었습니다.",
+      "url": "https://byungyeonkim.github.io/habit-tracker/",
+      "detail": "GitHub로 보기"
+    },
+    {
+      "src": "./images/projects/carrot-card.png",
+      "alt": "당근 뽑기 게임",
+      "title": "당근 뽑기 게임",
+      "description": "순수 자바스크립트로 만든 당근 뽑기 게임입니다. 웹 게임을 만듦으로써 문법과 친해지고 여러 자바스크립트 문법을 시도한 프로젝트입니다.",
+      "url": "https://byungyeonkim.github.io/CarrotPickingGame/",
+      "detail": "GitHub로 보기"
+    },
+    {
+      "src": "./images/projects/boostcourse-card.png",
+      "alt": "부스트코스 코칭스터디",
+      "title": "부스트코스",
+      "description": "온라인 코칭 스터디에 참여하여 팀 프로젝트, 주 1회 코칭 강의, 과제, 수료 후 온라인 자격증을 받을 수 있는 온라인 스터디 과정입니다.",
+      "url": "#",
+      "detail": "Notion으로 보기"
+    }
+  ]
+}

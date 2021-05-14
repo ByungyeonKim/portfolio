@@ -31,6 +31,13 @@ img {
   vertical-align: top;
 }
 
+/* Color Variable */
+:root {
+  --clr-neutral-900: #13171b;
+  --clr-neutral-100: #fff;
+  --clr-accent-400: #42f584;
+}
+
 /* Header */
 header {
   position: fixed;
@@ -101,7 +108,7 @@ header {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: rgb(248, 248, 255, 0.5);
+  color: rgba(248, 248, 255, 0.5);
   z-index: 99;
 }
 
@@ -178,7 +185,7 @@ header {
   flex-direction: column;
   align-items: center;
 
-  padding: 7.5em 6.25em;
+  padding: 6.25em;
   background-color: #1c0522;
 }
 
@@ -193,6 +200,137 @@ header {
   color: #fff;
   line-height: 1.25rem;
 }
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 30px;
+
+  max-width: 67.5rem;
+  margin: auto;
+  padding: 6.25em;
+}
+
+.card {
+  position: relative;
+  color: var(--clr-neutral-100);
+  padding: 10rem 0 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  transition: transform 500ms ease;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  position: relative;
+  height: 100%;
+
+  --padding: 1.5rem;
+  padding: var(--padding);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(20, 0, 0, 0.5) 30%,
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.crad-title {
+  position: relative;
+  width: max-content;
+  font-size: 1.5rem;
+}
+
+.crad-title::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: calc(var(--padding) * -1);
+  bottom: -4px;
+  width: calc(100% + var(--padding));
+  background: var(--clr-accent-400);
+  box-sizing: border-box;
+
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card-body {
+  color: rgb(255 255 255 / 0.85);
+  padding: 1em 0;
+  line-height: 1.2;
+}
+
+/* PC화면 일 때만(hover 기능 활성화 시) 아래 속성 적용 */
+@media (hover) {
+  .card {
+    cursor: pointer;
+  }
+
+  .card:hover .crad-title::after,
+  .card:focus-within .crad-title::after {
+    transform: scaleX(1);
+  }
+
+  .card-content {
+    transform: translateY(70%);
+    transition: transform 500ms ease;
+  }
+
+  .card-content > *:not(.crad-title) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+  }
+
+  .card:hover .card-content,
+  .card:focus-within .card-content {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  /* 파이어폭스 사이드 이펙트 */
+  .card:focus-within .card-content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card-content > *:not(.crad-title),
+  .card:focus-within .card-content > *:not(.crad-title) {
+    opacity: 1;
+    transition-delay: 1000ms;
+  }
+
+  .crad-title::after {
+    transform: scaleX(0);
+  }
+
+  .card-button:hover,
+  .card-button:focus {
+    background-color: var(--clr-neutral-100);
+  }
+}
+
+.card-button {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-accent-400);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+
 /* Arrow Button */
 .arrow-up {
   position: fixed;
