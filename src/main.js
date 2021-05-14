@@ -3,7 +3,6 @@
 const header = document.querySelector('header');
 const headerHeight = header.getBoundingClientRect().height;
 const stars = document.querySelector('.stars');
-const moon = document.querySelector('.moon');
 
 document.addEventListener('scroll', () => {
   if (window.scrollY > headerHeight) {
@@ -69,7 +68,7 @@ function loadProjectCards() {
 // 불러온 데이터에 HTML 추가
 function createHTMLCard(card) {
   return `
-  <div class="card">
+  <li class="card">
     <img class="card-image" src="${card.src}" alt="${card.alt}" />
     <div class="card-content">
       <h2 class="crad-title">${card.title}</h2>
@@ -78,14 +77,14 @@ function createHTMLCard(card) {
       </p>
       <a href="${card.url}" class="card-button" target="_blank">${card.detail}</a>
     </div>
-  </div>
+  </li>
   `;
 }
 
 // 불러온 데이터 렌더
 function displayCards(cards) {
-  const projectsContainer = document.querySelector('.projects-container');
-  projectsContainer.innerHTML = cards.map((card) => createHTMLCard(card)).join('');
+  const projectList = document.querySelector('.project-list');
+  projectList.innerHTML = cards.map((card) => createHTMLCard(card)).join('');
 }
 
 loadProjectCards().then((cards) => {
