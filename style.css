@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 img {
@@ -114,7 +114,7 @@ header {
   position: absolute;
   bottom: 35px;
   right: 10px;
-  color: rgba(248, 248, 255, 0.5);
+  color: rgba(248, 248, 255, 0.2);
   z-index: 99;
 }
 
@@ -187,11 +187,22 @@ header {
 
 /* Intro */
 .intro-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding: 6.25em;
+}
+
+.intro-container::before {
+  content: 'Image Source: https://www.freepik.com/';
+  text-align: right;
+  position: absolute;
+  top: -35px;
+  right: 10px;
+  color: rgba(248, 248, 255, 0.2);
+  z-index: 99;
 }
 
 .description {
@@ -328,6 +339,64 @@ header {
   background-color: var(--clr-accent-400);
   padding: 0.5em 1.25em;
   border-radius: 0.25rem;
+}
+
+/* Footer */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280px;
+
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.contact-wrap {
+  width: max-content;
+  padding: 2.5em;
+  background-color: rgba(117, 121, 222, 0.8);
+  border-radius: 12px;
+}
+
+.email {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  cursor: default;
+}
+
+.copy-btn {
+  position: absolute;
+  top: -5px;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+  color: white;
+
+  transition: color 300ms linear;
+}
+
+.copy-btn:hover {
+  color: #2b1055;
+}
+
+.fa-copy {
+  background: transparent;
+}
+
+.fa-github,
+.fa-envelope {
+  vertical-align: bottom;
+  transition: transform 300ms linear;
+}
+
+.github-link:hover .fa-github,
+.email:hover .fa-envelope {
+  transform: scale(1.2);
 }
 
 /* Arrow Button */
