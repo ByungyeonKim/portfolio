@@ -19,7 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="./src/main.js" defer></script>
+    <script src="./node_modules/clipboard/dist/clipboard.min.js" defer></script>
+    <script src="./src/index.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -91,13 +92,17 @@
     <!-- Footer -->
     <section id="contact" class="contact-container">
       <div class="contact-wrap">
-        <div class="email"><i class="fas fa-envelope"></i> viva_kby@naver.com
-          <button class="copy-btn"><i class="fas fa-copy"></i></button>
+        <div class="email">
+          <i class="fas fa-envelope"></i>viva_kby@naver.com
+          <button class="copy-btn" data-clipboard-text="viva_kby@naver.com">
+            <i class="fas fa-copy"></i>
+          </button>
         </div>
         <a class="github-link" href="https://github.com/ByungyeonKim" target="_blank"
-          ><i class="fab fa-github"></i> GitHub 
+          ><i class="fab fa-github"></i>GitHub
         </a>
       </div>
-    <section/>
+    </section>
+    <div class="tooltip"></div>
   </body>
 </html>

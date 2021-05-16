@@ -380,7 +380,7 @@ header {
   transition: color 300ms linear;
 }
 
-.copy-btn:hover {
+.copy-btn:hover .fa-copy {
   color: #2b1055;
 }
 
@@ -388,9 +388,34 @@ header {
   background: transparent;
 }
 
+.tooltip {
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%, 150%);
+
+  color: #fff;
+  width: 60%;
+  padding: 0.5em 0;
+
+  border-radius: 4px;
+  background-color: cornflowerblue;
+
+  transition: 300ms linear;
+  opacity: 0;
+}
+
+.tooltip.show-tooltip {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
 .fa-github,
 .fa-envelope {
   vertical-align: bottom;
+  margin-right: 4px;
+
   transition: transform 300ms linear;
 }
 
