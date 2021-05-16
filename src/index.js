@@ -60,7 +60,12 @@ introBtn.addEventListener('click', () => {
 
 // .json 파일에서 데이터 불러오기
 function loadProjectCards() {
-  return fetch('/data/data.json')
+  return fetch(
+    'https://github.com/ByungyeonKim/portfolio/blob/master/data/data.json',
+    {
+      method: 'GET',
+    }
+  )
     .then((response) => response.json())
     .then((result) => result.cards);
 }
