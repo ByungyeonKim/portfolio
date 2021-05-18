@@ -57,7 +57,7 @@ header {
   z-index: 999;
 }
 
-.header-dark {
+.header-up {
   transform: translateY(-100px);
 }
 
@@ -341,7 +341,7 @@ header {
   border-radius: 0.25rem;
 }
 
-/* Footer */
+/* Contact */
 .contact-container {
   display: flex;
   flex-direction: column;

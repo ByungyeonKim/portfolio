@@ -6,9 +6,9 @@ const stars = document.querySelector('.stars');
 
 document.addEventListener('scroll', () => {
   if (window.scrollY > headerHeight) {
-    header.classList.add('header-dark');
+    header.classList.add('header-up');
   } else {
-    header.classList.remove('header-dark');
+    header.classList.remove('header-up');
   }
   stars.style.transform = `translateY(${window.scrollY}px)`;
 });
