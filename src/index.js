@@ -75,7 +75,13 @@ function createHTMLCard(card) {
       <p class="card-body">
         ${card.description}
       </p>
-      <a href="${card.url}" class="card-button" target="_blank">${card.detail}</a>
+      <a
+        href="${card.url}" 
+        class="card-button"
+        target="_blank"
+        rel='noopener noreferrer'
+        >${card.detail}
+      </a>
     </div>
   </li>
   `;
