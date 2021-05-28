@@ -206,9 +206,10 @@ header {
 }
 
 .description {
-  max-width: 67.5rem;
-  color: #fff;
-  line-height: 1.25rem;
+  max-width: 42.5rem;
+  font-size: 1.25rem;
+  color: lavender;
+  line-height: 1.6rem;
 }
 
 /* Projects */
@@ -411,6 +412,7 @@ header {
   opacity: 1;
 }
 
+.fa-blog,
 .fa-github,
 .fa-envelope {
   vertical-align: bottom;
@@ -419,9 +421,14 @@ header {
   transition: transform 300ms linear;
 }
 
+.blog-link:hover .fa-blog,
 .github-link:hover .fa-github,
 .email:hover .fa-envelope {
   transform: scale(1.2);
+}
+
+.blog-link {
+  margin-left: 12px;
 }
 
 /* Arrow Button */
